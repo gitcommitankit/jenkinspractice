@@ -1,7 +1,10 @@
 pipeline{
+    agent any
     stages{
-      stage(GitCheckout){
+      stage("Git Checkout"){
+         steps{
          git credentialsId: 'AnkitGithub', url: 'https://github.com/gitcommitankit/jenkinspractice.git'
       }
     }
+  }
 }
