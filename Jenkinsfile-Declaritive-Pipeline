@@ -1,6 +1,6 @@
 pipeline{
     stages{
-      stage(Git Checkout){
+      stage(GitCheckout){
          git credentialsId: 'AnkitGithub', url: 'https://github.com/gitcommitankit/jenkinspractice.git'
       }
     }
