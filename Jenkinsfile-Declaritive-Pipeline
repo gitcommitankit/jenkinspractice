@@ -4,7 +4,13 @@ pipeline{
       stage("Git Checkout"){
          steps{
          git credentialsId: 'AnkitGithub', url: 'https://github.com/javahometech/myweb'
-      }
-    }
+        }
+     }
+      
+      stage("Maven Build"){
+         steps{
+         sh "mvn clean package"
+        }
+     }
   }
 }
